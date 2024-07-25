@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo.jpg"><!--縮圖-->
+    <title>露漉Lus</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/carousel.css"> 
+</head>
+<body class="page-background">
+
+    <div class="header-container">
+        <header>
+          <input id="nav-toggle" type="checkbox">
+          <div class="rwd-logo"><a href="index.html"><img src="img/logo.jpg"></a></div>
+          <label for="nav-toggle" class="ham">
+            <div class="ham-origin">
+              <div class="ham-bar ham-bar--top"></div>
+              <div class="ham-bar ham-bar--middle"></div>
+              <div class="ham-bar ham-bar--bottom"></div>
+            </div>
+          </label>
+      
+        <nav class="menu">
+          <nav class="top-links">
+            <a href="beverageV2.html">茶飲介紹</a>
+            <a href="index.html">最新消息</a>
+            <div class="no-rwd-logo"><a href="index.html"><img src="img/logo.jpg"></a></div>
+            <a href="join_us.html">加盟我們</a>
+          </nav>
+        </nav> 
+        </header>
+      </div>
+      
+
+    <!-- 加盟頁面 -->
+    <div class="page-franchise">
+        <div class="page-franchise__img" style="background-image: url('img/形象照片/形象產品照-紅葡萄柚綠茶.jpg');"></div>
+   
+        <form class="page-franchise__form">
+            <div class="page-franchise__title">
+                <p class="page-franchise__title-en">JOIN US</p>
+                <p class="page-franchise__title-zh">台灣加盟</p>
+            </div>
+            <div class="page-franchise__tabs">
+                <div class="tab -active">台灣地區</div>
+            </div>
+            <p class="page-franchise__desc">
+                歡迎加入露漉
+            </p>
+    
+            <div class="page-franchise__form-content">
+    <!-- Part1｜加盟計畫 -->
+    <div class="page-franchise__form-section-part">
+        <p class="page-franchise__form-section-part-title">Part1｜加盟計畫</p>
+
+        <div class="page-franchise__form-question">
+            <p class="page-franchise__form-title">1. 加盟區域</p>
+            <div class="page-franchise__form-item">
+                <input type="text" placeholder="請詳述地點，例：台北市大安區。" required>
+            </div>
+        </div>
+
+        <div class="page-franchise__form-question">
+            <p class="page-franchise__form-title">2. 資本額（新台幣）</p>
+            <div class="page-franchise__form-item">
+                <div class="custom-select">
+                    <div class="custom-options">
+                        <div class="custom-option" data-value="200萬以下">200萬以下</div>
+                        <div class="custom-option" data-value="200萬～300萬">200萬～300萬</div>
+                        <div class="custom-option" data-value="300萬以上">300萬以上</div>
+                    </div>
+                    <select class="custom-select-hidden">
+                        <option value="">請選擇資本額</option>
+                        <option value="200萬以下">200萬以下</option>
+                        <option value="200萬～300萬">200萬～300萬</option>
+                        <option value="300萬以上">300萬以上</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-franchise__form-question">
+            <p class="page-franchise__form-title">3. 資金來源</p>
+            <div class="page-franchise__form-item">
+                <div class="custom-select">
+                    <div class="custom-options">
+                        <div class="custom-option" data-value="全部自有">全部自有</div>
+                        <div class="custom-option" data-value="全部借貸">全部借貸</div>
+                        <div class="custom-option" data-value="部分自有、部分合夥">部分自有、部分合夥</div>
+                        <div class="custom-option" data-value="部分自有、部分借貸">部分自有、部分借貸</div>
+                        <div class="custom-option" data-value="部分自有、部分合夥、部分借貸">部分自有、部分合夥、部分借貸</div>
+                    </div>
+                    <select class="custom-select-hidden">
+                        <option value="">請選擇資金來源</option>
+                        <option value="全部自有">全部自有</option>
+                        <option value="全部借貸">全部借貸</option>
+                        <option value="部分自有、部分合夥">部分自有、部分合夥</option>
+                        <option value="部分自有、部分借貸">部分自有、部分借貸</option>
+                        <option value="部分自有、部分合夥、部分借貸">部分自有、部分合夥、部分借貸</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-franchise__form-question">
+            <p class="page-franchise__form-title">4. 店面資訊</p>
+            <div class="page-franchise__form-item form-check-inline">
+                <label class="page-franchise-radio"><input type="radio" name="store" value="尚未找到" required>尚未找到</label>
+                <label class="page-franchise-radio"><input type="radio" name="store" value="自有店面" required>自有店面</label>
+                <label class="page-franchise-radio"><input type="radio" name="store" value="承租店面" required>承租店面</label>
+
+                <div class="page-franchise__form-item-row">
+                    <input type="text" placeholder="坪數(坪)">
+                    <input type="text" placeholder="地址">
+                </div>
+                <div class="page-franchise__form-item-row">
+                    <input type="text" placeholder="租金(NTD)">
+                </div>
+            </div>
+        </div>
+
+        <div class="page-franchise__form-question">
+            <p class="page-franchise__form-title">5. 請簡單介紹您的經營團隊</p>
+            <div class="page-franchise__form-item">
+                <textarea placeholder="（如：團隊人數、關係、各成員職務分配、團隊共識等。）" required></textarea>
+            </div>
+        </div>
+    </div>
+
+        <!-- Part2｜基本資料 -->
+        <div class="page-franchise__form-section-part">
+            <p class="page-franchise__form-section-part-title">Part2｜基本資料</p>
+
+            <div class="page-franchise__form-question">
+                <p class="page-franchise__form-title">6. 姓名</p>
+                <div class="page-franchise__form-item">
+                    <input type="text" placeholder="請輸入您的姓名" required>
+                    <div class="error-message">請填寫姓名</div>
+                </div>
+            </div>
+
+            <div class="page-franchise__form-question">
+                <p class="page-franchise__form-title">7. 性別</p>
+                <div class="page-franchise__form-item form-check-inline">
+                    <label class="page-franchise-radio"><input type="radio" name="gender" value="男" required> 男</label>
+                    <label class="page-franchise-radio"><input type="radio" name="gender" value="女" required> 女</label>
+                </div>
+            </div>
+
+            <div class="page-franchise__form-question">
+                <p class="page-franchise__form-title">8. 生日</p>
+                <div class="page-franchise__form-item">
+                    <input type="date" required>
+                </div>
+            </div>
+
+            <div class="page-franchise__form-question">
+                <p class="page-franchise__form-title">9. 國籍</p>
+                <div class="page-franchise__form-item form-check-inline">
+                    <label class="page-franchise-radio"><input type="radio" name="nation" value="台灣" required> 台灣</label>
+                    <label class="page-franchise-radio"><input type="radio" name="nation" value="其他" required> 其他</label>
+                    <input type="text" placeholder="請輸入其他國籍">
+                </div>
+            </div>
+
+            <div class="page-franchise__form-question">
+                <p class="page-franchise__form-title">10. 聯絡資訊</p>
+                <div class="page-franchise__form-item">
+                    <input type="text" placeholder="手機號碼" maxlength="12" required>
+                    <input type="text" placeholder="LINE ID" required>
+                    <input type="email" placeholder="電子信箱" required>
+                </div>
+            </div>
+
+            <div class="page-franchise__form-question">
+                <p class="page-franchise__form-title">11. 居住地區</p>
+                <div class="page-franchise__form-item">
+                    <input type="text" placeholder="例：台北市大安區。" required>
+                </div>
+            </div>
+
+            <div class="page-franchise__form-question">
+                <p class="page-franchise__form-title">12. 婚姻狀況</p>
+                <div class="page-franchise__form-item form-check-inline">
+                    <label class="page-franchise-radio"><input type="radio" name="marriage" value="已婚" required> 已婚</label>
+                    <label class="page-franchise-radio"><input type="radio" name="marriage" value="未婚" required> 未婚</label>
+                    <label class="page-franchise-radio"><input type="radio" name="marriage" value="其他" required> 其他</label>
+                </div>
+            </div>
+
+            <div class="page-franchise__form-question">
+                <p class="page-franchise__form-title">13. 教育程度</p>
+                <div class="page-franchise__form-item form-check-inline">
+                    <label class="page-franchise-radio"><input type="radio" name="education" value="國中" required> 國中</label>
+                    <label class="page-franchise-radio"><input type="radio" name="education" value="高中" required> 高中</label>
+                    <label class="page-franchise-radio"><input type="radio" name="education" value="專科" required> 專科</label>
+                    <label class="page-franchise-radio"><input type="radio" name="education" value="大學" required> 大學</label>
+                    <label class="page-franchise-radio"><input type="radio" name="education" value="研究所" required> 研究所</label>
+                    <label class="page-franchise-radio"><input type="radio" name="education" value="其他" required> 其他</label>
+                </div>
+            </div>
+
+            <div class="page-franchise__form-question">
+                <p class="page-franchise__form-title">14. 經歷</p>
+                <div class="page-franchise__form-item">
+                    <p>現職：</p>
+                    <div class="page-franchise__form-item-row">
+                        <input type="text" placeholder="公司名稱" required>
+                        <input type="text" placeholder="職稱" required>
+                        <input type="text" placeholder="管理人數(人)" required>
+                    </div>
+                    <p>過往經歷：</p>
+                    <div class="page-franchise__form-item-row">
+                        <input type="text" placeholder="公司名稱" required>
+                        <input type="text" placeholder="職稱" required>
+                        <input type="text" placeholder="管理人數(人)" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-franchise__form-question">
+                <p class="page-franchise__form-title">15. 請詳述您的財務往來及規劃。</p>
+                <div class="page-franchise__form-item">
+                    <textarea placeholder="（如：信用貸款、保險等個人或家庭支出項目。）" required></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- Part3｜意向調查 -->
+        <div class="page-franchise__form-section-part">
+            <p class="page-franchise__form-section-part-title">Part3｜意向調查</p>
+
+            <div class="page-franchise__form-question">
+                <p class="page-franchise__form-title">16. 請列舉三項您最喜愛的手搖飲品牌及其飲品，並分享原因。</p>
+                <div class="page-franchise__form-item">
+                    <textarea placeholder="請輸入文字⋯⋯" required></textarea>
+                </div>
+            </div>
+
+            <div class="page-franchise__form-question">
+                <p class="page-franchise__form-title">17. 請說明您選擇加入露漉Lus的原因為何？您認為品牌於市場中的優勢、劣勢有哪些？</p>
+                <div class="page-franchise__form-item">
+                    <textarea placeholder="請輸入文字⋯⋯" required></textarea>
+                </div>
+            </div>
+
+            <div class="page-franchise__form-question">
+                <p class="page-franchise__form-title">18. 請分享您過往的創業經驗或連鎖品牌參與、經營經驗，以及您對創業發展的期望。</p>
+                <div class="page-franchise__form-item">
+                    <textarea placeholder="請輸入文字⋯⋯" required></textarea>
+                </div>
+            </div>
+
+            <div class="page-franchise__form-question">
+                <p class="page-franchise__form-title">19. 您認為，如何維持良好的營運品質？</p>
+                <div class="page-franchise__form-item">
+                    <textarea placeholder="請輸入文字⋯⋯" required></textarea>
+                </div>
+            </div>
+
+            <div class="page-franchise__form-question">
+                <p class="page-franchise__form-title">20. 您期望本公司給予您的協助或其他建議。</p>
+                <div class="page-franchise__form-item">
+                    <textarea placeholder="請輸入文字⋯⋯" required></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+            <div class="page-franchise__form-bottom">
+                 <button type="submit">提交申請</button>
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <p>
+                    <i class="material-icons">phone</i>電話: 04 2338 0238 
+                    <a href="https://www.instagram.com/_lus.tea/" target="_blank">
+                        <img src="img/icon/ig.png" alt="Instagram" class="ig-icon">
+                        Lus.Tea
+                    </a>
+                    <a href="https://www.facebook.com/p/露漉茶研-100025054440550/" target="_blank">
+                      <img src="img/icon/Facebook.png" alt="facebook" class="facebook-icon">
+                      漉露。茶研
+                  </a>
+                </p>
+            </div>
+            <p>此網站由 <a href="https://www.kecl.com.tw/">知行天下股份有限公司</a> 設計及維護</p>
+        </div>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/carousel.js"></script>
+    
+    
+    
+</body>      

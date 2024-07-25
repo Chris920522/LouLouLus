@@ -1,0 +1,789 @@
+/* 基本樣式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* 頁面頂部樣式 */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(110,126,51);
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 1000;
+  font-size: 20px;
+}
+header a{
+    color: #ffffff;
+    text-decoration: none;
+}
+header a:hover{
+    color: #ffe498;
+}
+
+.header-container {
+  height: 70px; 
+}
+
+.rwd-logo{
+    display: none;
+}
+
+
+/* 頁面右上角連結樣式 */
+.top-links {
+    display: flex;
+    justify-content: center; /* 水平居中對齊 */
+    align-items: center; /* 垂直居中對齊 */
+    gap: 20px;
+    height: 100%; /* 確保填滿header的高度 */
+    margin-right: 8vh;
+}
+
+/* 主內容區域樣式 */
+.content {
+    padding: 20px;
+}
+
+header a img {
+  height: auto;
+  width: 60px;
+}
+
+#nav-toggle {
+  display: none;
+}
+
+
+/* RWD */
+@media (max-width: 800px) {
+  .menu .top-links {
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
+    align-items: center; /* 垂直居中 */
+  }
+
+  .rwd-logo{
+    display: block;
+    z-index: -101; /* 確保它在最下層 */
+}
+
+   .no-rwd-logo {
+    display: none;
+  }
+
+  .ham {
+    width: 45px;
+    height: 45px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px; /* 確保漢堡按鈕在右邊 */
+    transform: translateY(-50%);
+  }
+  
+  .ham-origin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .ham-bar {
+    height: 2px;
+    width: 26px;
+    position: absolute;
+    background: white;
+    margin: -1px 0 0 -13px;
+    transition: all .5s;
+  }
+  
+  .ham-bar--top {
+    transform: translateY(-6px);
+  }
+  
+  .ham-bar--bottom {
+    transform: translateY(6px);
+  }
+  
+  #nav-toggle:checked ~ .ham .ham-bar--middle {
+    opacity: 0;
+  }
+  
+  #nav-toggle:checked ~ .ham .ham-bar--top {
+    transform: rotate(-45deg);
+  }
+  
+  #nav-toggle:checked ~ .ham .ham-bar--bottom {
+    transform: rotate(45deg);
+  }
+
+  .menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 80px;
+    background: rgba(0, 0, 0, 0.7);
+    /* 用 translate 把選單藏到畫面右邊去 */
+    transform: translateX(100%);
+    transition: transform .5s;
+    z-index:-100;
+  }
+  
+  #nav-toggle:checked ~ .menu {
+    transform: none;
+  }
+
+}
+
+
+
+
+
+/* 頁尾樣式 */
+footer {
+    background-color: rgb(110,126,51);
+    padding: 50px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.contact-info a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #bbb812;
+}
+
+.material-icons {
+    vertical-align: middle;
+    margin-right: 5px;
+    font-size: 20px;
+    color:rgb(255, 255, 255);
+}
+
+footer a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.ig-icon {
+    width: 50px; /* 調整圖示的寬度 */
+    height: auto; /* 高度自適應，保持圖片比例 */
+    margin-bottom: -18px; /* 向下移動*/
+}
+.facebook-icon{
+    width: 23px;
+    height: auto;
+    margin: auto 8px -5px 15px;
+}
+
+/* 地圖 */
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 1350px; 
+}
+
+.map-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(62, 69, 36, 0.415), rgb(62, 69, 36)); /* 從上到下變色 半透明綠色色塊 */
+    z-index: 1;
+}
+
+
+.map-address {
+    color: rgb(214, 220, 209);
+    font-size: 35px;
+    text-align: center;
+    z-index: 2; /* 文字 */
+    padding: 15px 5px;
+    max-width: 33rem;
+    margin: 200px auto 100px auto;
+    font-weight: bold;
+}
+
+@media (max-width: 800px) {
+    .map-address {
+        font-size: 30px;
+    }
+    
+    .map-container {
+        height: 1000px; 
+    }
+}
+
+/* ----------茶飲介紹Beverage---------- */
+.seriesContent {
+  max-width: 90%;
+  margin: 0 auto;
+  /* 水平置中 */
+  overflow: hidden;
+  position: relative;
+  flex: 1;
+  padding-bottom: 100%;
+  margin-top: 60px;
+}
+
+.seriesButton button {
+  background: transparent;
+  outline: none;
+  border: solid #CD853F 1px;
+  cursor: pointer;
+  font-size: 25px;
+  font-family: "PMingLiU", "MingLiU", serif;
+  transition: 0.3s ease, color 0.3s ease;
+  /* 控制按鈕變色淡出淡入效果 */
+}
+
+.seriesButton {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: 0 auto;
+  color: #CD853F;
+}
+
+.seriesButton button:hover {
+  background: #CD853F;
+  color: white;
+}
+
+.seriesButton button.selected
+/* 按鈕被點擊時的效果，只存在於CSS中，並不存在於HTML裡，因為會在JavaScript裡使用"classList.add"添加  */
+  {
+  background: #CD853F;
+  color: white;
+}
+
+
+.beverageGrid a {
+  display: block;
+  width: 75%;
+  padding-top: 100%;
+  /* 利用 padding-top 來保持比例 */
+  position: relative;
+  margin: 0 auto;
+  text-decoration: none;
+}
+
+.Tea {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+  width: 90%;
+  left: 5%;
+  /* 置中 */
+  padding-top: 30px;
+  transform: translateX(150%);
+}
+
+.beverageGrid img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.beveragePic p {
+  margin-top: 10px;
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+}
+
+.beverageGrid img:hover {
+  transform: scale(1.1);
+  /* 讓圖片被鼠標指到時放大 */
+}
+
+/* ----------茶飲介紹BeverageV2---------- */
+.seriesContentV2 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  background-color:rgb(43, 54, 3);
+}
+
+.beverageGrid{
+  width: 90%;
+  margin: 0 auto;
+  color: #ffffff;
+}
+
+.beverageGrid h1{
+  color: #bbb812;
+  text-align: center;
+  font-size: 42px;
+}
+
+.beverageGrid a {
+  display: block;
+  width: 75%;
+  padding-top: 100%;
+  /* 利用 padding-top 來保持比例 */
+  position: relative;
+  margin: 0 auto;
+  text-decoration: none;
+}
+
+.TeaV2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+  width: 90%;
+  margin: 0 auto;
+  /* 置中 */
+  padding-top: 30px;
+}
+
+.beverageGrid img {
+  border: 5px solid #5A7107;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.beveragePic p {
+  margin-top: 10px;
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  color: #ffffff;
+}
+
+.beverageGrid img:hover {
+  transform: scale(1.1);
+  /* 讓圖片被鼠標指到時放大 */
+}
+
+@media (max-width: 768px) {
+  .beverageGrid img {
+    width: 100%;
+    height: 60%;
+  }
+
+  .beverageGrid p{
+    font-size: 12px;
+    padding-top: 100%;
+  }
+
+}
+
+
+/*--------------------------------beverageIntro--------------------------------*/
+.product {
+  /* 調整寬度以實現更好的對齊 */
+  max-width: 80%;
+  min-height: 65vh;
+  margin: 10px auto;
+  /* 在上下各添加 10px 間距 */
+  padding: 5% 40px 5%;
+}
+
+.product-name, .info {
+  padding-left: 55%;
+}
+
+#productName, #productSeries {
+  text-align: center;
+}
+
+#productSeries {
+  color: #C7802D;
+}
+
+.product hr{
+  width: 45%;
+  margin-right: 3%;
+}
+
+.info {
+   
+  width: 40%;
+}
+
+.product img {
+  width: 40%;
+  height: 40%;
+  max-height: 800px;
+  /* 限制最高大小 */
+  object-fit: cover;
+  /* 防止圖片壓縮變形 */
+  float: left;
+  margin-right: 20px;
+}
+
+.product hr {
+  margin-top: 20px;
+}
+
+.product-name h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+
+/* 改進的間距和填充 */
+.info {
+  line-height: 1.8;
+  margin-top: 20px;
+}
+
+.info p {
+  font-size: 20px;
+}
+
+#amount {
+  width: 120px;
+  height: 40px;
+}
+
+@media (max-width: 768px){
+  .info p {
+    font-size: 12px;
+  }
+
+  .product img {
+    padding-top: 20%;
+    width: 45%;
+    height: 45%;
+    max-height: 800px;
+    /* 限制最高大小 */
+    object-fit: cover;
+    /* 防止圖片壓縮變形 */
+    float: left;
+    margin-right: 20px;
+  }
+
+  .product {
+    padding: 5% 40px 0%;
+    max-width: 100%;
+    min-height:50vh;
+  }
+
+}
+
+/* ---------加盟頁面 CSS--------- */
+
+.page-background{
+  background-color: rgb(43, 54, 3);
+}
+
+.page-franchise {
+  display: flex;
+  align-items: flex-start; /* 對齊到頂部 */
+  flex-wrap: wrap; /* 確保在移動設備上能夠換行 */
+  padding: 40px;
+}
+
+.page-franchise__img {
+  background-size: cover;
+  background-position: center;
+  width: 45%; 
+  height: 90vh;
+  position: relative;
+  text-align: center;
+  margin-right: 80px;
+}
+
+.page-franchise__form {
+  padding: 10px;
+  border-radius: 10px;
+  width: 45%; 
+  height: 90vh; /* 高度設置為視口高度 */
+  box-sizing: border-box; /* 確保 padding 不影響高度 */
+  overflow-y: scroll; /* 确保内容可以垂直滚动 */
+  scrollbar-width: none; /* 隐藏滚动条*/
+  -ms-overflow-style: none; /* 隐藏滚动条  IE 和 Edge */
+  color: #fff;
+}
+
+.page-franchise__form-section {
+  display: flex;
+  flex-direction: column; /* 設置垂直排列 */
+}
+
+.page-franchise__form-section-part-title{
+  font-size: 25px;
+  color: #bbb812;
+  text-align: center;
+}
+
+.page-franchise__form-section-part {
+  width: 100%; /* 設置寬度為 100% */
+  margin-bottom: 20px;
+}
+
+
+.page-franchise__title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.page-franchise__title-en {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.page-franchise__title-zh {
+  font-size: 2em;
+  color: #ffffff;
+}
+
+.page-franchise__tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.page-franchise__tabs .tab {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.page-franchise__tabs .tab.-active {
+  background: #333;
+  color: #fff;
+}
+
+.page-franchise__desc {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.page-franchise__form-question {
+  margin-bottom: 10px;
+}
+
+
+.page-franchise__form-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-franchise__form-item input,
+.page-franchise__form-item textarea,
+.page-franchise__form-item select {
+  background: transparent; /* 背景透明 */
+  border: 1px solid rgba(255, 255, 255, 0.5); /* 半透明白色邊框 */
+  color: #fff; /* 輸入文字顏色白色 */
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+/* 設置輸入框的提示文字顏色 */
+.page-franchise__form-item input::placeholder,
+.page-franchise__form-item textarea::placeholder,
+.page-franchise__form-item select::placeholder {
+  color: rgba(224, 224, 224, 0.608); /* 淺白色 */
+}
+
+
+/* 設置選單標頭和文字顏色 */
+.page-franchise__form-title {
+  color: #fff; /* 標頭文字白色 */
+  font-size: 1em;
+  margin-bottom: 5px;
+}
+
+.page-franchise__form-item label {
+  color: #fff; /* 標簽文字白色 */
+  margin-right: 10px; 
+}
+
+
+/* 隐藏原生的 select 元素 */
+.custom-select-hidden {
+  display: none !important;
+}
+
+/* 自定義 select 容器 */
+.custom-select {
+  position: relative;
+  width: 100%;
+  user-select: none;
+}
+
+/* 觸發下拉菜單的按鈕 */
+.custom-select-trigger {
+  display: block;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  z-index: 20; /* 保證在最上層 */
+}
+
+/* 下拉菜單樣式 */
+.custom-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: rgb(43, 54, 3);
+  z-index: 10;
+  display: none;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+/* 下拉菜單選項樣式 */
+.custom-option {
+  padding: 10px;
+  cursor: pointer;
+  color: #fff;
+  background-color: rgb(43, 54, 3);
+}
+
+.custom-option:hover,
+.custom-option.selected {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+
+.page-franchise__form-item-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.page-franchise__form-item-row input {
+  width: 48%;
+}
+
+.page-franchise__form-bottom {
+  text-align: center;
+}
+
+.page-franchise__form-bottom button {
+  padding: 10px 20px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+
+/* 單選選項 */
+.form-check-inline {
+  display: inline;
+  margin-right: 10px;
+}
+
+.page-franchise-radio {
+  display: inline-flex; /* 改為 inline-flex */
+  align-items: center; /* 垂直居中對齊 */
+  margin-right: 10px;
+  margin-bottom: 8px; 
+}
+
+.page-franchise-radio input[type="radio"] {
+  -webkit-appearance: none; /* 去除預設外觀 */
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px; /* 設置寬度和高度使其成為圓形 */
+  height: 20px;
+  border: 1px solid #fff; 
+  border-radius: 50%; /* 圓形邊框 */
+  background-color: transparent; /* 透明背景 */
+  outline: none; /* 去除點擊時的外框 */
+  cursor: pointer;
+  margin: 3px 5px 3px 5px;
+  vertical-align: middle; 
+}
+
+.page-franchise-radio input[type="radio"]:checked::before {
+  content: ''; /* 使用偽元素實現圓點 */
+  display: block;
+  width: 10px; /* 小圓點的大小 */
+  height: 10px;
+  background-color: #fff; 
+  border-radius: 50%; 
+  margin: -5px; 
+}
+
+
+
+
+
+
+
+
+
+/* 在移動設備上調整布局 */
+@media (max-width: 768px) {
+  .page-franchise {
+    flex-direction: column; /* 讓頁面容器垂直排列 */
+    align-items: center; /* 居中對齊 */
+  }
+
+  .page-franchise__img, .page-franchise__form {
+    width: 100%; /* 設置寬度為 100% */
+    margin: 0; /* 取消左右間距 */
+  }
+
+  .page-franchise__img {
+    height: auto; /* 讓圖片高度自適應 */
+  }
+
+  .page-franchise__form {
+    height: auto; /* 取消視口高度 */
+  }
+
+  .page-franchise__form-section-part {
+    width: 100%; /* 設置寬度為 100% */
+    margin-bottom: 20px;
+  }
+}
+
+

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/logo.jpg"><!--縮圖-->
+  <title>露漉Lus</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body background="img/菜單背景.jpg" onload="taiwanTeaTab()"> <!-- 在網頁剛載入時就執行taiwanTeaTab的function，也就是預設顯示嚴選台灣好茶系列 -->
+  <div class="header-container">
+    <header>
+      <input id="nav-toggle" type="checkbox">
+      <div class="rwd-logo"><a href="index.html"><img src="img/logo.jpg"></a></div>
+      <label for="nav-toggle" class="ham">
+        <div class="ham-origin">
+          <div class="ham-bar ham-bar--top"></div>
+          <div class="ham-bar ham-bar--middle"></div>
+          <div class="ham-bar ham-bar--bottom"></div>
+        </div>
+      </label>
+
+      <nav class="menu">
+        <nav class="top-links">
+          <a href="beverageV2.html">茶飲介紹</a>
+          <a href="index.html">最新消息</a>
+          <div class="no-rwd-logo"><a href="index.html"><img src="img/logo.jpg"></a></div>
+          <a href="join_us.html">加盟我們</a>
+        </nav>
+      </nav>
+    </header>
+  </div>
+  <div class="seriesContent">
+    <div class="seriesButton">
+      <button id="taiwanTeaBtn" onclick="taiwanTeaTab()">嚴選台灣好茶</button>
+      <button id="camomileTeaBtn" onclick="camomileTeaTab()">台灣杭菊系列</button>
+      <button id="fruitTeaBtn" onclick="fruitTeaTab()">水果茶系列</button>
+      <button id="specialTeaBtn" onclick="specialTeaTab()">雀巢三花特調</button>
+      <button id="milkTeaBtn" onclick="milkTeaTab()">台灣農場鮮奶系列</button>
+      <button id="seasonSpecialTeaBtn" onclick="seasonSpecialTeaTab()">季節限定</button>
+    </div>
+    <div class="beverageGrid">
+      <div id="fruitTea" class="Tea">
+        <a href="beverageIntro.html" class="beveragePic" data-id="1" onclick="saveProductId(event)">
+          <img src="img/菜單/水果、茶/古釀冬瓜.jpg" alt="">
+          <p>古釀冬瓜</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="2" onclick="saveProductId(event)">
+          <img src="img/菜單/水果、茶/古釀冬瓜檸檬.jpg" alt="">
+          <p>古釀冬瓜檸檬</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="3" onclick="saveProductId(event)">
+          <img src="img/菜單/水果、茶/柳橙綠茶.jpg" alt="">
+          <p>柳橙綠茶</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="4" onclick="saveProductId(event)">
+          <img src="img/菜單/水果、茶/柳橙青茶.jpg" alt="">
+          <p>柳橙青茶</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="5" onclick="saveProductId(event)">
+          <img src="img/菜單/水果、茶/百香綠茶.jpg" alt="">
+          <p>百香綠茶</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="6" onclick="saveProductId(event)">
+          <img src="img/菜單/水果、茶/百香青茶.jpg" alt="">
+          <p>百香青茶</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="7" onclick="saveProductId(event)">
+          <img src="img/菜單/水果、茶/紅葡萄柚綠茶.jpg" alt="">
+          <p>紅葡萄柚綠茶</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="8" onclick="saveProductId(event)">
+          <img src="img/菜單/水果、茶/翡翠檸檬綠茶.jpg" alt="">
+          <p>翡翠檸檬綠茶</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="9" onclick="saveProductId(event)">
+          <img src="img/菜單/水果、茶/翡翠檸檬青茶.jpg" alt="">
+          <p>翡翠檸檬青茶</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="10" onclick="saveProductId(event)">
+          <img src="img/菜單/水果、茶/養樂多綠茶.jpg" alt="">
+          <p>養樂多綠茶</p>
+        </a>
+      </div>
+      <div id="milkTea" class="Tea">
+        <a href="beverageIntro.html" class="beveragePic" data-id="11" onclick="saveProductId(event)">
+          <img src="img/菜單/台灣農場鮮奶/台灣焙火那堤.jpg" alt="">
+          <p>台灣焙火那堤</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="12" onclick="saveProductId(event)">
+          <img src="img/菜單/台灣農場鮮奶/復刻那堤.jpg" alt="">
+          <p>復刻那堤</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="13" onclick="saveProductId(event)">
+          <img src="img/菜單/台灣農場鮮奶/抹茶那堤.jpg" alt="">
+          <p>抹茶那堤</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="14" onclick="saveProductId(event)">
+          <img src="img/菜單/台灣農場鮮奶/斯里蘭卡那堤.jpg" alt="">
+          <p>斯里蘭卡那堤</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="15" onclick="saveProductId(event)">
+          <img src="img/菜單/台灣農場鮮奶/英式伯爵那堤.jpg" alt="">
+          <p>英式伯爵那堤</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="16" onclick="saveProductId(event)">
+          <img src="img/菜單/台灣農場鮮奶/阿華田鮮奶.jpg" alt="">
+          <p>阿華田鮮奶</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="17" onclick="saveProductId(event)">
+          <img src="img/菜單/台灣農場鮮奶/黑糖波霸那堤.jpg" alt="">
+          <p>黑糖波霸那堤</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="18" onclick="saveProductId(event)">
+          <img src="img/菜單/台灣農場鮮奶/黑糖那堤.jpg" alt="">
+          <p>黑糖那堤</p>
+        </a>
+      </div>
+      <div id="camomileTea" class="Tea">
+        <a href="beverageIntro.html" class="beveragePic" data-id="19" onclick="saveProductId(event)">
+          <img src="img/菜單/台灣杭菊系列/天然杭菊花茶.jpg" alt="">
+          <p>台灣杭菊</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="20" onclick="saveProductId(event)">
+          <img src="img/菜單/台灣杭菊系列/杭菊青茶.jpg" alt="">
+          <p>台灣杭菊青茶</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="21" onclick="saveProductId(event)">
+          <img src="img/菜單/台灣杭菊系列/純蜂蜜杭菊花茶.jpg" alt="">
+          <p>台灣杭菊紅茶</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="22" onclick="saveProductId(event)">
+          <img src="img/菜單/台灣杭菊系列/杭菊綠茶.jpg" alt="">
+          <p>台灣杭菊綠茶</p>
+        </a>
+      </div>
+      <div id="seasonSpecialTea" class="Tea">
+        <a href="beverageIntro.html" class="beveragePic" data-id="23" onclick="saveProductId(event)">
+          <img src="img/菜單/季節限定/oreo巧克力冰淇淋鮮奶.jpg" alt="">
+          <p>oreo巧克力冰淇淋鮮奶</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="24" onclick="saveProductId(event)">
+          <img src="img/菜單/季節限定/芋泥芋圓鮮奶.jpg" alt="">
+          <p>芋泥芋圓鮮奶</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="25" onclick="saveProductId(event)">
+          <img src="img/菜單/季節限定/芋泥鮮奶.jpg" alt="">
+          <p>芋泥鮮奶</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="26" onclick="saveProductId(event)">
+          <img src="img/菜單/季節限定/鳳梨冰梅.jpg" alt="">
+          <p>鳳梨冰梅</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="27" onclick="saveProductId(event)">
+          <img src="img/菜單/季節限定/鳳梨冰沙.jpg" alt="">
+          <p>鳳梨冰沙</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="28" onclick="saveProductId(event)">
+          <img src="img/菜單/季節限定/鳳梨青茶.jpg" alt="">
+          <p>鳳梨青茶</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="29" onclick="saveProductId(event)">
+          <img src="img/菜單/季節限定/黑可可巧克力伯爵.jpg" alt="">
+          <p>黑可可巧克力伯爵</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="30" onclick="saveProductId(event)">
+          <img src="img/菜單/季節限定/黑可可巧克力奶茶.jpg" alt="">
+          <p>黑可可巧克力奶茶</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="31" onclick="saveProductId(event)">
+          <img src="img/菜單/季節限定/黑可可巧克力那堤.jpg" alt="">
+          <p>黑可可巧克力那堤</p>
+        </a>
+      </div>
+      <div id="specialTea" class="Tea">
+        <a href="beverageIntro.html" class="beveragePic" data-id="32" onclick="saveProductId(event)">
+          <img src="img/菜單/雀巢三花特調/LUS.奶綠.jpg" alt="">
+          <p>LUS.奶綠</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="33" onclick="saveProductId(event)">
+          <img src="img/菜單/雀巢三花特調/台灣焙火奶茶.jpg" alt="">
+          <p>台灣焙火奶茶</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="34" onclick="saveProductId(event)">
+          <img src="img/菜單/雀巢三花特調/復刻奶茶.jpg" alt="">
+          <p>復刻奶茶</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="35" onclick="saveProductId(event)">
+          <img src="img/菜單/雀巢三花特調/斯里蘭卡奶茶.jpg" alt="">
+          <p>斯里蘭卡奶茶</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="36" onclick="saveProductId(event)">
+          <img src="img/菜單/雀巢三花特調/波霸奶綠.jpg" alt="">
+          <p>波霸奶綠</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="37" onclick="saveProductId(event)">
+          <img src="img/菜單/雀巢三花特調/純蜂蜜奶茶.jpg" alt="">
+          <p>純蜂蜜奶茶</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="38" onclick="saveProductId(event)">
+          <img src="img/菜單/雀巢三花特調/統一布丁奶茶.jpg" alt="">
+          <p>統一布丁奶茶</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="39" onclick="saveProductId(event)">
+          <img src="img/菜單/雀巢三花特調/英式伯爵奶茶.jpg" alt="">
+          <p>英式伯爵奶茶</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="40" onclick="saveProductId(event)">
+          <img src="img/菜單/雀巢三花特調/阿華田.jpg" alt="">
+          <p>阿華田</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="41" onclick="saveProductId(event)">
+          <img src="img/菜單/雀巢三花特調/香草冰淇淋奶茶.jpg" alt="">
+          <p>香草冰淇淋奶茶</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="42" onclick="saveProductId(event)">
+          <img src="img/菜單/雀巢三花特調/香草冰淇淋紅茶.jpg" alt="">
+          <p>香草冰淇淋紅茶</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="43" onclick="saveProductId(event)">
+          <img src="img/菜單/雀巢三花特調/黑糖奶茶.jpg" alt="">
+          <p>黑糖奶茶</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="44" onclick="saveProductId(event)">
+          <img src="img/菜單/雀巢三花特調/黑糖波霸奶茶.jpg" alt="">
+          <p>黑糖波霸奶茶</p>
+        </a>
+      </div>
+      <div id="taiwanTea" class="Tea">
+        <a href="beverageIntro.html" class="beveragePic" data-id="45" onclick="saveProductId(event)">
+          <img src="img/菜單/嚴選台灣好茶/台灣焙火四季青茶.jpg" alt="">
+          <p>台灣焙火四季青茶</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="46" onclick="saveProductId(event)">
+          <img src="img/菜單/嚴選台灣好茶/台灣焙火紅茶.jpg" alt="">
+          <p>台灣焙火紅茶</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="47" onclick="saveProductId(event)">
+          <img src="img/菜單/嚴選台灣好茶/台灣輕焙火綠茶.jpg" alt="">
+          <p>台灣輕焙火綠茶</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="48" onclick="saveProductId(event)">
+          <img src="img/菜單/嚴選台灣好茶/復刻紅茶.jpg" alt="">
+          <p>復刻紅茶</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="49" onclick="saveProductId(event)">
+          <img src="img/菜單/嚴選台灣好茶/斯里蘭卡紅茶.jpg" alt="">
+          <p>斯里蘭卡紅茶</p>
+        </a>
+        <a href="beverageIntro.html" class="beveragePic" data-id="50" onclick="saveProductId(event)">
+          <img src="img/菜單/嚴選台灣好茶/英式伯爵.jpg" alt="">
+          <p>英式伯爵</p>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    <div class="footer-content">
+        <div class="contact-info">
+            <p>
+                <i class="material-icons">phone</i>電話: 04 2338 0238 
+                <a href="https://www.instagram.com/_lus.tea/" target="_blank">
+                    <img src="img/icon/ig.png" alt="Instagram" class="ig-icon">
+                    Lus.Tea
+                </a>
+                <a href="https://www.facebook.com/p/露漉茶研-100025054440550/" target="_blank">
+                  <img src="img/icon/Facebook.png" alt="facebook" class="facebook-icon">
+                  漉露。茶研
+              </a>
+            </p>
+        </div>
+        <p>此網站由 <a href="https://www.kecl.com.tw/">知行天下股份有限公司</a> 設計及維護</p>
+    </div>
+</footer>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="js/carousel.js"></script>
+
+
+
+</body>      
