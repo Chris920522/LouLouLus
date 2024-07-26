@@ -280,7 +280,7 @@ footer a{
 }
 
 .seriesButton button.selected
-/* 按鈕被點擊時的效果，只存在於CSS中，並不存在於HTML裡，因為會在JavaScript裡使用"classList.add"添加  */
+/* 按鈕被點擊時的效果，.selected只存在於CSS中，並不存在於HTML裡，因為會在JavaScript裡使用"classList.add"添加  */
   {
   background: #CD853F;
   color: white;
