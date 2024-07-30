@@ -302,9 +302,12 @@ const products = {
   },
 };
 
-window.onload = function() {
+window.onload = function() { 
+  // window.onload用來在整個網頁載入所有元素後觸發
   const productId = localStorage.getItem('productId');
+  // 從 localStorage 中取得 productId
     const product = products[productId];
+    // 從 products 數組中取得對應的產品
     document.getElementById('productSeries').innerText=product.title;
     document.getElementById('productName').innerText = product.name;
     document.getElementById('productDescription').innerText = product.description;
